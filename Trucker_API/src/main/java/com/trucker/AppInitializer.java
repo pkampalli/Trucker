@@ -1,4 +1,4 @@
-package com.trucker.Trucker_API;
+package com.trucker;
 
 import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer;
 

@@ -13,19 +13,23 @@ public class Vehicle {
 	
 	String make;
 	String model;
-	int makeYear;
-	int redLineRpm;
+	int year;
+	int redlineRpm;
 	int maxFuelVolume;
 	Date lastServiceDate;
 	
+	public Vehicle() {
+		super();
+	}
+
 	public Vehicle(String vin, String make, String model, int makeYear, int redLineRpm, int maxFuelVolume,
 			Date lastServiceDate) {
-		super();
+		//super();
 		this.vin = vin;
 		this.make = make;
 		this.model = model;
-		this.makeYear = makeYear;
-		this.redLineRpm = redLineRpm;
+		this.year = makeYear;
+		this.redlineRpm = redLineRpm;
 		this.maxFuelVolume = maxFuelVolume;
 		this.lastServiceDate = lastServiceDate;
 	}
@@ -49,16 +53,16 @@ public class Vehicle {
 		this.model = model;
 	}
 	public int getMakeYear() {
-		return makeYear;
+		return year;
 	}
 	public void setMakeYear(int makeYear) {
-		this.makeYear = makeYear;
+		this.year = makeYear;
 	}
 	public int getRedLineRpm() {
-		return redLineRpm;
+		return redlineRpm;
 	}
 	public void setRedLineRpm(int redLineRpm) {
-		this.redLineRpm = redLineRpm;
+		this.redlineRpm = redLineRpm;
 	}
 	public int getMaxFuelVolume() {
 		return maxFuelVolume;
@@ -75,8 +79,8 @@ public class Vehicle {
 
 	@Override
 	public String toString() {
-		return "Vehicle [vin=" + vin + ", make=" + make + ", model=" + model + ", makeYear=" + makeYear
-				+ ", redLineRpm=" + redLineRpm + ", maxFuelVolume=" + maxFuelVolume + ", lastServiceDate="
+		return "Vehicle [vin=" + vin + ", make=" + make + ", model=" + model + ", makeYear=" + year
+				+ ", redLineRpm=" + redlineRpm + ", maxFuelVolume=" + maxFuelVolume + ", lastServiceDate="
 				+ lastServiceDate + "]";
 	}
 	
