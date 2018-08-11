@@ -5,6 +5,7 @@ import javax.persistence.PersistenceContext;
 
 import org.springframework.stereotype.Repository;
 
+import com.trucker.entityPack.Reading;
 import com.trucker.entityPack.Vehicle;
 
 @Repository
@@ -16,6 +17,12 @@ public class VehicleRepositoryImpl implements VehicleRepository{
 	@Override
 	public Vehicle putVehicle(Vehicle vehicle) {
 		return em.merge(vehicle);
+	}
+
+	@Override
+	public Reading postReading(Reading reading) {
+		em.persist(reading);
+		return reading;
 	}
 
 }

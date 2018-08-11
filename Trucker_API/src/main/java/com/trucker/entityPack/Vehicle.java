@@ -13,23 +13,22 @@ public class Vehicle {
 	
 	String make;
 	String model;
-	int year;
-	int redlineRpm;
-	int maxFuelVolume;
+	double year;
+	double redlineRpm;
+	double maxFuelVolume;
 	Date lastServiceDate;
 	
 	public Vehicle() {
-		super();
+		
 	}
 
-	public Vehicle(String vin, String make, String model, int makeYear, int redLineRpm, int maxFuelVolume,
+	public Vehicle(String vin, String make, String model, double year, double redlineRpm, double maxFuelVolume,
 			Date lastServiceDate) {
-		//super();
 		this.vin = vin;
 		this.make = make;
 		this.model = model;
-		this.year = makeYear;
-		this.redlineRpm = redLineRpm;
+		this.year = year;
+		this.redlineRpm = redlineRpm;
 		this.maxFuelVolume = maxFuelVolume;
 		this.lastServiceDate = lastServiceDate;
 	}
@@ -52,22 +51,22 @@ public class Vehicle {
 	public void setModel(String model) {
 		this.model = model;
 	}
-	public int getMakeYear() {
+	public double getYear() {
 		return year;
 	}
-	public void setMakeYear(int makeYear) {
-		this.year = makeYear;
+	public void setYear(double year) {
+		this.year = year;
 	}
-	public int getRedLineRpm() {
+	public double getRedlineRpm() {
 		return redlineRpm;
 	}
-	public void setRedLineRpm(int redLineRpm) {
-		this.redlineRpm = redLineRpm;
+	public void setRedlineRpm(double redlineRpm) {
+		this.redlineRpm = redlineRpm;
 	}
-	public int getMaxFuelVolume() {
+	public double getMaxFuelVolume() {
 		return maxFuelVolume;
 	}
-	public void setMaxFuelVolume(int maxFuelVolume) {
+	public void setMaxFuelVolume(double maxFuelVolume) {
 		this.maxFuelVolume = maxFuelVolume;
 	}
 	public Date getLastServiceDate() {
