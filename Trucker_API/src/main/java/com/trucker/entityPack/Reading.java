@@ -5,19 +5,22 @@ import java.util.UUID;
 
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
-import javax.persistence.FetchType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
+import javax.persistence.NamedQueries;
+import javax.persistence.NamedQuery;
 import javax.persistence.OneToOne;
-import javax.persistence.PrimaryKeyJoinColumn;
 
-import org.springframework.beans.factory.annotation.Autowired;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-import com.fasterxml.jackson.annotation.JsonProperty;
 
 @Entity
 @JsonIgnoreProperties(ignoreUnknown = true)
+@NamedQueries({
+	
+	@NamedQuery(name="Reading.getVehicleLocations", query="SELECT reading FROM Reading reading WHERE reading.vin=:paramVin"+
+	                                             " AND TIMESTAMPDIFF(minute, reading.timestamp,NOW()) < 31 ORDER BY reading.timestamp")
+})
 public class Reading {
 
 	@Id

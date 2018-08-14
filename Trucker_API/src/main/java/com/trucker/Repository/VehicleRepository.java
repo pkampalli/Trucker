@@ -1,11 +1,12 @@
 package com.trucker.Repository;
 
-import com.trucker.entityPack.Reading;
+import java.util.List;
+
 import com.trucker.entityPack.Vehicle;
 
 public interface VehicleRepository {
 
 	Vehicle putVehicle(Vehicle vehicle);
-	Reading postReading(Reading reading);
-	
+	Vehicle getVehicleByVin(String vin);
+	List<Vehicle> getAllVehicles();
 }

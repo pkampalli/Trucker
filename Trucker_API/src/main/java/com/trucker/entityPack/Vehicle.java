@@ -4,8 +4,14 @@ import java.util.Date;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.NamedQueries;
+import javax.persistence.NamedQuery;
 
 @Entity
+@NamedQueries({
+	
+	@NamedQuery(name="Vehicle.findByVin", query="SELECT vehicle FROM Vehicle vehicle WHERE vehicle.vin=:paramVin")
+})
 public class Vehicle {
 
 	@Id
